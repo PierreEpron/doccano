@@ -135,15 +135,17 @@ export default {
         chunks.push({
           label: null,
           color: null,
-          text: snippet + '\n',
+          text: snippet + ' ',
           newline: false
         })
-        chunks.push({
-          label: null,
-          color: null,
-          text: '',
-          newline: true
-        })
+        if (snippet === '') {
+          chunks.push({
+            label: null,
+            color: null,
+            text: '',
+            newline: true
+          })
+        }
       }
       chunks.push({
         label: null,
